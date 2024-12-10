@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>魔手成規</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="player-setup">
+    <h1>魔手成規</h1>
+    <p>請選擇玩家人數：</p>
+    <button onclick="setupGame(2)">2 人</button>
+    <button onclick="setupGame(3)">3 人</button>
+    <button onclick="setupGame(4)">4 人</button>
+  </div>
+  <div id="game-area" style="display: none;">
+    <div id="current-turn">目前是 <span id="current-player-name"></span> 的回合</div>
+    <div id="scoreboard"></div>
+    <div id="player-cards"></div>
+    <button id="draw-button" class="circle-button" onclick="drawCard()">抽卡</button>
+    <div id="card-display"></div>
+    <div id="penalty-control">
+      <p>選擇玩家扣分：</p>
+      <select id="player-select"></select>
+      <input type="number" id="penalty-points" placeholder="扣分數" min="1">
+      <button onclick="applyPenalty()">確認扣分</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
